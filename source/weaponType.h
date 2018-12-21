@@ -12,7 +12,11 @@ enum WeaponType
 	WeaponType_Saber,
 	WeaponType_Flail,
 	WeaponType_Scythe,
-	WeaponType_Claymore
+	WeaponType_Claymore,
+	WeaponType_Axe,
+	WeaponType_Crossbow,
+	WeaponType_Slingshot,
+	WeaponType_Mace,
 };
 
 const char* WeaponName_None = "None";
@@ -24,6 +28,10 @@ const char* WeaponName_Saber = "Saber";
 const char* WeaponName_Flail = "Flail";
 const char* WeaponName_Scythe = "Scythe";
 const char* WeaponName_Claymore = "Claymore";
+const char* WeaponName_Axe = "Axe";
+const char* WeaponName_Crossbow = "Crossbow";
+const char* WeaponName_Slingshot = "Slingshot";
+const char* WeaponName_Mace = "Mace";
 
 
 
@@ -39,6 +47,11 @@ const char* GetWeaponName(WeaponType weaponType)
 		case WeaponType_Flail: return WeaponName_Flail;
 		case WeaponType_Scythe: return WeaponName_Scythe;
 		case WeaponType_Claymore: return WeaponName_Claymore;
+		case WeaponType_Axe: return WeaponName_Axe;
+		case WeaponType_Crossbow: return WeaponName_Crossbow;
+		case WeaponType_Slingshot: return WeaponName_Slingshot;
+		case WeaponType_Mace: return WeaponName_Mace;
+
 	}
 
 	return WeaponName_None;
@@ -56,6 +69,10 @@ int GetWeaponMinDamage(WeaponType weaponType)
 	case WeaponType_Flail: return 35;
 	case WeaponType_Scythe: return 45;
 	case WeaponType_Claymore: return 61;
+	case WeaponType_Axe: return 84;
+	case WeaponType_Crossbow: return 90;
+	case WeaponType_Slingshot: return 100;
+	case WeaponType_Mace: return 110;
 	default: return 0;
 	}
 }
@@ -72,6 +89,10 @@ int GetWeaponMaxDamage(WeaponType weaponType)
 	case WeaponType_Flail: return 41;
 	case WeaponType_Scythe: return 57;
 	case WeaponType_Claymore: return 84;
+	case WeaponType_Axe: return 90;
+	case WeaponType_Crossbow: return 100;
+	case WeaponType_Slingshot: return 110;
+	case WeaponType_Mace: return 125;
 	default: return 0;
 	}
 }
@@ -95,10 +116,11 @@ WeaponType GetWeaponTypeFromCell(unsigned char cellSymbol)
 		case CellSymbol_Flail: return WeaponType_Flail;
 		case CellSymbol_Scythe: return WeaponType_Scythe;
 		case CellSymbol_Claymore: return WeaponType_Claymore;
-
+		case CellSymbol_Axe: return WeaponType_Axe;
+		case CellSymbol_Crossbow: return WeaponType_Crossbow;
+		case CellSymbol_Slingshot: return WeaponType_Slingshot;
+		case CellSymbol_Mace: return WeaponType_Mace;
 	}
 
 	return WeaponType_None;
 }
-
-//WeaponType GetWeaponType(int weapon)
